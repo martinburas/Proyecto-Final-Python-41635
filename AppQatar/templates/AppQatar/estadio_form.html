@@ -1,0 +1,17 @@
+{% extends "AppQatar/inicio.html" %}
+
+{% block subt %}
+¡Gracias por aportar un nuevo dato!
+{% endblock %}
+
+{% block contenidoQueCambia %}
+    
+<form action="" enctype="multipart/form-data" method="POST"> {% csrf_token %}
+    
+    {{form.as_p}}
+    <input type="submit" value="Enviar">
+
+</form>
+<button onclick="history.back()">Atrás</button>
+
+{% endblock %}

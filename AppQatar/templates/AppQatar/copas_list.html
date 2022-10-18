@@ -1,0 +1,28 @@
+{% extends "AppQatar/inicio.html" %}
+
+{% block subt %}
+¡Conocé las selecciones ganadoras!
+{% endblock %}
+
+{% block contenidoQueCambia %}
+    
+<h1><p style="color: rgb(146, 0, 61);">Adentrate en cada una de ellas</p></h1>
+
+
+{% for copa in object_list %}
+
+<li>Selección: {{copa.selecc}}</li>
+
+<a href="{% url 'CopasDetalle' copa.id %}">+ Info</a> |
+<a href="{% url 'CopasBorrar' copa.id %}">Eliminar</a> |
+<a href="{% url 'CopasActualizar' copa.id %}">Editar</a>
+
+
+{% endfor %}
+
+
+<ul>
+<a href="{% url 'CopasCrear' %}">Añadir datos</a>
+</ul>
+
+{% endblock %}

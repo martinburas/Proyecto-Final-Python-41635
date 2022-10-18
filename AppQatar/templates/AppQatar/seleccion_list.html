@@ -1,0 +1,26 @@
+{% extends "AppQatar/inicio.html" %}
+
+{% block subt %}
+¡Descubrí las selecciones!
+{% endblock %}
+
+{% block contenidoQueCambia %}
+    
+<h1><p style="color: rgb(146, 0, 61);">Estas son las selecciones que jugarán:</p></h1>
+
+{% for selec in object_list %}
+
+<li>Selección: {{selec.pais}}</li>
+
+<a href="{% url 'SeleccionDetalle' selec.id %}">+ Info</a> |
+<a href="{% url 'SeleccionBorrar' selec.id %}">Eliminar</a> |
+<a href="{% url 'SeleccionActualizar' selec.id %}">Editar</a>
+
+{% endfor %}
+
+
+<ul>
+<a href="{% url 'SeleccionCrear' %}">Añadir Selección</a>
+</ul>
+
+{% endblock %}

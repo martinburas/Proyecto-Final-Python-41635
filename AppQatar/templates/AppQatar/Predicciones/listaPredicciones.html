@@ -1,0 +1,24 @@
+{% extends "AppQatar/inicio.html" %}
+
+{% block subt %}
+Predicciones
+{% endblock %}
+
+{% block contenidoQueCambia %}
+    
+    
+<a href="{% url 'Añadir Prediccion' %}">Añadir mi predicción</a>
+<p style="color:  rgb(146, 0, 61);">______________________________________________________________________________________________</p>
+
+{% for e in resultados %}
+    <ul>Para <a style="color:  rgb(146, 0, 61);" ><strong>{{e.autor}}</strong></a>:</ul>
+    <li><strong>{{e.ganadora}}</strong> le ganará a <strong>{{e.segunda}}</strong> en la final de la Copa del Mundo.</li>
+    <li>Predicción realizada el día {{e.hoy}}</li>
+
+<a style="color:  rgb(146, 0, 61);">______________________________________________________________________________________________</a>
+
+{% endfor %}
+
+
+
+{% endblock %}

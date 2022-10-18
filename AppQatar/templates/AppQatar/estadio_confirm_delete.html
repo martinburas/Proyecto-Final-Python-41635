@@ -1,0 +1,17 @@
+{% extends "AppQatar/inicio.html" %}
+
+{% block subt %}
+Vas a borrar un estadio
+{% endblock %}
+
+{% block contenidoQueCambia %}
+    
+<form action="" method="POST"> {% csrf_token %}
+    <h1>¿Estás seguro que querés eliminar esta información?</h1>
+    <input type="submit" value="Sí, eliminar">
+
+
+</form>
+
+<button onclick="history.back()">No, regresar</button>
+{% endblock %}

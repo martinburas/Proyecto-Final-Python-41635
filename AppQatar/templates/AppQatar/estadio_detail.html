@@ -1,0 +1,15 @@
+{% extends "AppQatar/inicio.html" %}
+
+{% block subt %}
+{{estadio.nombre}}
+{% endblock %}
+
+{% block contenidoQueCambia %}
+    
+<p>El estadio llamado <strong>{{estadio.nombre}}</strong> se encuentra en la ciudad de {{estadio.ciudad}}.</p>
+<img src="{{estadio.imagen.url}}" alt="No hay imagen." width="300" height="150">
+<div></div>
+<button onclick="history.back()">Atrás</button>
+
+
+{% endblock %}

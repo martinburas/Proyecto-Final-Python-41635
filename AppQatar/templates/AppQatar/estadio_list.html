@@ -1,0 +1,26 @@
+{% extends "AppQatar/inicio.html" %}
+
+{% block subt %}
+¡Conocé los estadios!
+{% endblock %}
+
+{% block contenidoQueCambia %}
+    
+<h1><p style="color: rgb(146, 0, 61);">Estadios de Qatar 2022:</p></h1>
+
+{% for estadio in object_list %}
+
+<li>Estadio: {{estadio.nombre}}</li>
+
+<a href="{% url 'EstadiosDetalle' estadio.id %}">+ Info</a> |
+<a href="{% url 'EstadiosBorrar' estadio.id %}">Eliminar</a> |
+<a href="{% url 'EstadiosActualizar' estadio.id %}">Editar</a>
+
+{% endfor %}
+
+
+<ul>
+<a href="{% url 'EstadiosCrear' %}">Añadir Estadio</a>
+</ul>
+
+{% endblock %}

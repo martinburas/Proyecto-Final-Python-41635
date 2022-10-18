@@ -1,0 +1,21 @@
+{% extends "AppQatar/inicio.html" %}
+
+{% block subt %}
+<h1 class="text btn-light btn-lg">Selección: {{seleccion.pais}}</h1>
+<h1 class="text btn-light btn-lg">Continente: {{seleccion.continente}}</h1>
+<h1 class="text btn-light btn-lg">Su primer partido será en {{seleccion.fecha}}</h1>
+
+{% if seleccion.imagen2 %}
+<img src="{{seleccion.imagen2.url}}" alt="No hay imagen." width="500" height="300">
+{% else %}
+<h1 class="text btn-light btn-lg">Añade su bandera haciendo clic <a href="{% url 'SeleccionActualizar' seleccion.id %}">aquí</a></h1>
+{% endif %}
+<div></div>
+
+<button onclick="history.back()">Atrás</button>
+{% endblock %}
+
+{% block contenidoQueCambia %}
+    
+
+{% endblock %}

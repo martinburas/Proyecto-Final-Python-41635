@@ -1,0 +1,20 @@
+{% extends "AppQatar/inicio.html" %}
+
+{% block subt %}
+    
+{% if resultados %}
+
+{% for r in resultados %}
+
+<h1 class="text btn-light btn-lg">Selección: {{r.pais}}</h1>
+<h1 class="text btn-light btn-lg">Continente: {{r.continente}}</h1>
+<h1 class="text btn-light btn-lg">Su primer partido será en {{r.fecha}}</h1>
+{% endfor %}
+
+{% else %}
+<h1 class="text btn-light btn-lg">No hay datos de esta selección</h1>
+
+{% endif %}
+
+
+{% endblock %}

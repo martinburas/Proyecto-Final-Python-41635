@@ -1,0 +1,52 @@
+{% extends "AppQatar/padre.html" %}
+
+{% load static %}
+
+{% block titulo %}
+
+<h1><p style="color: rgb(146, 0, 61);"> {{mensaje}}</p></h1>
+
+<header class="masthead" style="background-image: url({%static 'AppQatar/assets/img/bg-qatar2.jpg'%})">
+    <div class="container position-relative">
+        <div class="row justify-content-center">
+            <div class="col-xl-10">
+                <div class="text-center text-white">
+                    <!-- Page heading-->
+                    <h1 class="mb-5"><p style="color: whitesmoke;">
+                        
+                        {% block subt %}
+                        Bienvenido al centro de información del Mundial de Qatar 2022!</p></h1>
+                        {% endblock %}
+
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+{% endblock %}
+
+
+
+{% block contenidoQueCambia %}
+<div class="col-lg-4">
+    <div class="card mb-4">
+        <form action="/AppQatar/buscar/" method="GET">
+            <div class="card-header">Buscar selección</div>
+            <div class="card-body">
+                <div class="input-group">
+                    <input class="form-control" type="text" placeholder="Ingresa el nombre..." name="pais" id="pais" />
+                    <input type="submit" value="Buscar">
+                </div>
+            </div>
+        </form>
+        
+    </div>
+</div>
+
+    
+
+
+
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends "AppQatar/inicio.html" %}
+
+{% block subt %}
+{{copas.selecc}}
+{% endblock %}
+
+{% block contenidoQueCambia %}
+    
+                {% if copas.cantCopas > 1 %}
+                <p>La selección de {{copas.selecc}} ha conseguido {{copas.cantCopas}} Copas del Mundo.</p>
+                <p>La última ha sido en el año {{copas.ultimaCopa}}. </p>
+                {% endif %}
+
+                {% if copas.cantCopas == 1 %}
+                <p>La selección de {{copas.selecc}} ha conseguido {{copas.cantCopas}} Copa del Mundo.</p>
+                <p>Ha sido en el año {{copas.ultimaCopa}}. </p>
+                {% endif %}
+
+                {% if copas.cantCopas == 0 %}
+                <p>La selección de {{copas.selecc}} todavía no ha ganado ninguna Copa del Mundo. </p>
+                {% endif %}
+        
+
+        
+
+
+
+
+                <button onclick="history.back()">Atrás</button>
+
+
+{% endblock %}

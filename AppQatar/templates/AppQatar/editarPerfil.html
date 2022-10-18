@@ -1,0 +1,15 @@
+{% extends "AppQatar/padre.html" %}
+
+{% block titulo %}
+
+<h1>Editar perfil de <strong style="color: rgb(146, 0, 61);">{{usuario}}</strong></h1>
+
+<form action="" method="POST">{% csrf_token %}
+    <table>
+        {{form2edit.as_table}}
+    </table>
+    <input type="submit", value="Enviar">
+    
+</form>
+
+{% endblock %}
