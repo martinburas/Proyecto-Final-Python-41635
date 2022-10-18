@@ -1,4 +1,4 @@
-# Proyecto Final de Python - Qatar
+# Proyecto Final de Python - Mundial de Qatar 2022
 
 Este trabajo fue realizado individualmente por Martín Burastero.
 
